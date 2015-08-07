@@ -5,10 +5,10 @@ require("capybara")
 also_reload('lib/**/*.rb')
 
 get ("/") do
-  erb:index
+  erb(:index)
 end
 
-get ("title") do
-  erb:title
+get ("/title") do
+  erb(:title)
   @title=params.fetch("title").title_case()
 end
